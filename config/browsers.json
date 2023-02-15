@@ -1,0 +1,11 @@
+{
+    "chrome": {
+        "defaultVersion": "109.0",
+        "versions": {
+            "109.0": {
+                "image": "seleniarm/standalone-chromium:109.0",
+                "port": "4444"
+            }
+        }
+    }
+}

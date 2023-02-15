@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo stopping any running container
+
+docker stop $(docker ps -a -q)
+
+echo removing the containers
+docker rm $(docker ps -a -q)
+
+echo starting the selenoid server
+docker compose up

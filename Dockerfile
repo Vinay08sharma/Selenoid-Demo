@@ -1,0 +1,13 @@
+FROM seleniarm/standalone-chromium:4.1.1-alpha-20220119
+
+ENV CHROMEDRIVER_PORT 4444
+ENV CHROMEDRIVER_WHITELISTED_IPS "127.0.0.1"
+ENV CHROMEDRIVER_URL_BASE ''
+EXPOSE 4444
+
+EXPOSE 8080
+EXPOSE 5005
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+# For Testing
+ENTRYPOINT ["java","-jar", "-Xmx600m","/app.jar"]
