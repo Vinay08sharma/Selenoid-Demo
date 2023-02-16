@@ -1,3 +1,5 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -11,12 +13,6 @@ public class WebDemo {
     WebDriver driver;
     @Test
     public void startBrowser() throws Exception {
-//        DesiredCapabilities capability = new DesiredCapabilities();
-//        capability.setBrowserName("chrome");
-//        capability.setVersion("109.0");
-//        capability.setCapability("enableVNC", true);
-//        capability.setCapability("enableVideo", true);
-//        capability.setCapability("videoName", "test_video.mp4");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--no-sandbox");
         options.addArguments("start-maximized"); // open Browser in maximized mode
@@ -32,11 +28,15 @@ public class WebDemo {
             put("enableVideo", true);
         }});
 
-        options.setCapability("browserVersion", "109.0");
+        options.setCapability("browserVersion", "91.0.b");
         driver = new RemoteWebDriver(new URL("http://localhost:4445/wd/hub"), options);
 
 
         driver.get("https://google.com");
+        System.out.println(driver.getTitle());
+
+        driver.findElement(By.name("q")).sendKeys("selenoid");
+        driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
         System.out.println(driver.getTitle());
         Thread.sleep(10000);
         driver.quit();

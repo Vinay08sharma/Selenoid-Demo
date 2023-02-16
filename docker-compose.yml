@@ -26,9 +26,9 @@ services:
     networks:
       - selenoid
     command: ["--selenoid-uri", "http://selenoid:4444"]
-  chrome_109.0:
-    image: "seleniarm/standalone-chromium:109.0"
-    container_name: chrome_109.0
+  chrome_91.0.b:
+    image: "dumbdumbych/selenium_vnc_chrome_arm64:91.0.b"
+    container_name: chrome_91.0.b
     links:
       - selenoid
       - selenoid-ui

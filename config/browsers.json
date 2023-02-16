@@ -2,8 +2,8 @@
     "chrome": {
         "defaultVersion": "109.0",
         "versions": {
-            "109.0": {
-                "image": "seleniarm/standalone-chromium:109.0",
+            "91.0.b": {
+                "image": "dumbdumbych/selenium_vnc_chrome_arm64:91.0.b",
                 "port": "4444"
             }
         }
