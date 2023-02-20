@@ -10,7 +10,8 @@ import org.testng.annotations.Test;
 import java.net.URL;
 import java.util.HashMap;
 
-public class WebDemo {
+public class WebDemo1 {
+
     public WebDriver driver;
     @BeforeTest
     public void startBrowser() throws Exception {
@@ -38,8 +39,8 @@ public class WebDemo {
     }
 
     @Test
-    public void test1()  {
-        driver.findElement(By.name("q")).sendKeys("Selenium");
+    public void test1() {
+        driver.findElement(By.name("q")).sendKeys("selenoid");
         driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
         System.out.println(driver.getTitle());
 
@@ -47,7 +48,6 @@ public class WebDemo {
 
         System.out.println(driver.getCurrentUrl());
         System.out.println(driver.getTitle());
-
     }
 
     @AfterTest
