@@ -6,6 +6,8 @@ Here I have tried to run sample selenium test inside a docker container with the
 
 - Make sure you have docker installed, If not refer this link [https://docs.docker.com/desktop/install/mac-install/]
 
+- Should have a basic selenium test
+
 - Let the dependencies get downloaded.
 
 - You need to pull video container if you need the video recording [optional]
